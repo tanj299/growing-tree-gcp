@@ -1,0 +1,114 @@
+@import url('https://fonts.googleapis.com/css?family=Fira+Sans:700|Roboto&display=swap');
+
+/* http://meyerweb.com/eric/tools/css/reset/ 
+   v2.0 | 20110126
+   License: none (public domain)
+*/
+
+.App {
+  text-align: center;
+}
+
+.App-logo {
+  height: 40vmin;
+}
+
+.App-header {
+  background-color: #282c34;
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  font-size: calc(10px + 2vmin);
+  color: white;
+}
+
+.App-link {
+  color: #09d3ac;
+}
+
+body {
+  background-color: greenyellow;
+  background-size: cover;
+  /* background-repeat: repeat-y; */
+  text-align: center;
+  height: 100vh;
+  padding: 0;
+  margin: 0;
+  font-family: 'Roboto', sans-serif;
+}
+
+.images {
+  text-align: center;
+}
+
+.home-header {
+  padding-top: 85px;
+  padding-bottom: 85px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.home-header h1 {
+  font-size: 32px;
+  max-width: 640px;
+  padding: 15px;
+  text-align: center;
+}
+
+.btn_controls_wrapper {
+  background-color: #4CAF50; /* Green */
+  border: none;
+  color: white;
+  padding: 15px 32px;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  font-size: 16px;
+  margin: 4px 2px;
+  cursor: pointer;
+}
+
+nav {
+  padding: 0px 20px;
+  display: flex;
+  justify-content: flex-end;
+  box-shadow: 0px 8px 10px -5px #ddd;
+  position: relative;
+  font-family: 'Fira Sans', sans-serif;
+}
+
+nav a {
+  padding: 20px 8px;
+  text-decoration: none;
+  font-weight: bolder;
+  color: #67678a;
+  margin: 3px;
+}
+
+.home_link {
+  margin: auto auto auto 0px;
+}
+
+.water_button {
+  display: inline-block;
+  padding: 15px 32px;
+  background-color: white; 
+  color: black; 
+  font-size: 32px;
+  border: 2px solid #4CAF50;
+}
+
+.water_button:hover {
+  background-color: rgb(1, 233, 202);
+  border: none white;
+  cursor: pointer;
+}
+
+.water_button:active {
+  background-color: rgb(40, 233, 202);
+}
+
+

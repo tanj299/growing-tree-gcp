@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+
+<head>
+  <title> Grow a tree </title>
+  <script type="text/javascript" src="{{ url_for('static', filename='script.js') }}"></script>
+  <link type="text/css" rel="stylesheet" href="../static/style.css">
+</head>
+
+<body "background-color:greenyellow">
+  <h1>
+    Grow a tree! 
+    <p>Current frame: {{ frames }} </p>
+  </h1>
+  <div class="images">
+    <div>Timer until tree dies: <span id='timer'>24:00:00</span> minutes!</div>
+    <img src="https://storage.googleapis.com/dist_systems_tree_frames_multiregion/frames-high-quality/plant-0071.jpg">
+  </div>
+
+    <h2>Last 10 visits</h2>
+    {% for time in times %}
+    <p>{{ time['timestamp'] }}</p>
+    {% endfor %}
+
+
+  <button class="water_button" type="submit">Water</button>
+  <!-- <script async defer src="../js/timer.js"></script> -->
+  <script type="text/javascript">
+    var count = 86400;
+    // every 1000 milliseconds, run the function, timer
+    var counter = setInterval(timer, 1000);
+
+    function timer() {
+      count = count - 1;
+      if (count == -1) {
+        clearInterval(counter);
+        return;
+      }
+
+      var seconds = count % 60;
+      var minutes = Math.floor(count / 60);
+      var hours = Math.floor(minutes / 60);
+      minutes %= 60;
+      hours %= 60;
+
+      document.getElementById("timer").innerHTML = hours + ":" + minutes + ":" + seconds; // watch for spelling
+    }
+  </script>
+</body>
+
+</html>
