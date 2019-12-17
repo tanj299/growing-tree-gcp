@@ -43,7 +43,7 @@ def frame():
     # python syntax // divides and round down to integer
     # result proxy allows us to grab data using .first()[INDEX]
     frameNum = otherResult.first()[0]
-    result = 'https://storage.googleapis.com/dist_systems_tree_frames_multiregion/frames-high-quality/plant-00'+str(frameNum)+'.jpg'
+    result = 'https://storage.googleapis.com/dist_systems_tree_frames_multiregion/frames-high-quality/plant-'+str(frameNum)+'.jpg'
     return result
 
 
