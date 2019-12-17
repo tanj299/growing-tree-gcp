@@ -11,7 +11,8 @@ db = SQLAlchemy(app)
 Time = True
 def timer():
     otherResult = db.engine.execute ("select * from age")
-    result = [row[0] for row in otherResult]
+    # python syntax // divides and round down to integer
+    result = [row[0]//15 for row in otherResult]
     # mins = 0
     # secs = 60
     # mins_prev = 0
@@ -33,6 +34,7 @@ def timer():
     #         otherResult = db.engine.execute("select * from age")
     #         print([row[0] for row in otherResult])
     #         timer()
+    # result = result / 15
     return result
 
 
