@@ -18,9 +18,9 @@
     <h2><span id='timer'>24:00:00</span> </h2>
     <div> Bookmark us and check back frequently to keep your plant alive and admire its growth</div>
     <div>Optionally, tell your friends about us!</div>
-    <h2>This tree has been alive for: {{ frames }} days</h2>
+    <h2>This tree has been alive for: {{ days }} days</h2>
     <p><button class="water_button" onClick="window.location.reload();">Water</button></p>
-    <img src="https://storage.googleapis.com/dist_systems_tree_frames_multiregion/frames-high-quality/plant-0071.jpg">
+    <img src="{{frameNum}}">
   </div>
 
     {% for time in times %}
@@ -49,6 +49,7 @@
 
       document.getElementById("timer").innerHTML = hours + ":" + minutes + ":" + seconds; // watch for spelling
     }
+    
   </script>
 </body>
 

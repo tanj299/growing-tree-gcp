@@ -38,13 +38,23 @@ def timer():
     return result
 
 
+def frame():
+    otherResult = db.engine.execute("select * from age")
+    # python syntax // divides and round down to integer
+    # result proxy allows us to grab data using .first()[INDEX]
+    frameNum = otherResult.first()[0]
+    result = 'https://storage.googleapis.com/dist_systems_tree_frames_multiregion/frames-high-quality/plant-00'+str(frameNum)+'.jpg'
+    return result
+
+
 @app.route('/')
 def root():
     # Fetch the most recent tree frame number.
     times = timer()
+    frames = frame()
 
     return render_template(
-        'index.html', frames=times)
+        'index.html', days=times, frameNum = frames)
 
 
 if __name__ == '__main__':
