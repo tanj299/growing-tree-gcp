@@ -4,7 +4,11 @@ from flask_sqlalchemy import SQLAlchemy
 
 #Flask configuration
 app = Flask(__name__)
+
+# Notes: This should be a read from replica so change URI to read replica
 app.config['SQLALCHEMY_DATABASE_URI'] = 'mysql+pymysql://tree:tree@35.225.107.184/tree'
+
+# Notes: Any write should go to primary DB, which is actually the URI above ending in ".184..."
 db = SQLAlchemy(app)
 
 #Timer configuration
