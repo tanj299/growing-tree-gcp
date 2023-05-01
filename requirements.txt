@@ -1,5 +1,5 @@
 # so this is the package.json equivalent in python
-Flask==1.1.1
+Flask==2.3.2
 google-cloud-datastore==1.9.0
 google-cloud-storage==1.19.1
 gunicorn==19.9.0
